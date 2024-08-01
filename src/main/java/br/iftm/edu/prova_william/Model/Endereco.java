@@ -1,14 +1,13 @@
 package br.iftm.edu.prova_william.Model;
-
-
-
 import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Id;
 
 public class Endereco {
 
     @Id
-    GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
 
     private long id;
     private String rua;
@@ -80,4 +79,4 @@ public class Endereco {
     }
 }
     
-}
+
