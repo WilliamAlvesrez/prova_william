@@ -1,0 +1,25 @@
+Dados inseridos no h2-console
+
+
+Inserir Endereço
+
+INSERT INTO endereco (id, rua, numero, cidade, estado, cep) 
+VALUES (1, 'Rua A', '123', 'Cidade B', 'Estado C', '12345-678');
+
+Inserir Pacote
+INSERT INTO pacote (id, destinatario, status, endereco_id) 
+VALUES ('123', 'João Silva', 'Em Trânsito', 1);
+
+Atualizar Status de um Pacote
+UPDATE pacote 
+SET status = 'Entregue' 
+WHERE id = '123';
+
+
+Consultar Informações de Rastreamento
+
+INSERT INTO rastreamento (id, data_hora, status, localizacao, pacote_id) 
+VALUES (1, CURRENT_TIMESTAMP, 'Em Trânsito', 'Localização A', '123');
+
+informações do rastreamento
+SELECT * FROM rastreamento WHERE pacote_id = '123';
