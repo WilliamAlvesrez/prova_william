@@ -1,19 +1,19 @@
 package br.iftm.edu.prova_william.Model;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
-import jakarta.persistence.ManyToOne;
+import jakarta.persistence.Entity;  
 import jakarta.persistence.Id;
 
+@Entity
 public class Endereco {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-
     private long id;
     private String rua;
     private String numero;
     private String cidade;
-    private String estado;  
+    private String estado;
     private String cep;
 
     public Endereco() {}
@@ -78,5 +78,3 @@ public class Endereco {
         return rua + ", " + numero + ", " + cidade + " - " + estado + ", " + cep;
     }
 }
-    
-
